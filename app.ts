@@ -27,7 +27,7 @@ app.get('/', (req , res) => {
 })
 
 app.post("/sleep", (req, res) => {
-  exec(commands.openFileExplorer, execCallback);
+  exec(commands.sleep, execCallback);
   res.render("actions/system", req.body);
 });
 
