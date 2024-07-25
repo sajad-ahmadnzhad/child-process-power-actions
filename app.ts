@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import bodyParser from "body-parser";
-import commands from "./commands";
+import commands from "./utils/commands";
 import { execCallback } from "./utils/functions";
 
 const app = express();
