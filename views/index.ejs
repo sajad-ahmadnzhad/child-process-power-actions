@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مدیریت سیستم</title>
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #00ffff;
+      }
+
+      form {
+        margin: 1rem 0;
+      }
+
+      button {
+        background-color: #00ffff;
+        color: #000;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #007f7f;
+        transform: scale(1.05);
+      }
+
+      button:active {
+        background-color: #005f5f;
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body dir="rtl">
+    <h1>لطفا عملیات مورد نظر را انتخاب نمایید:</h1>
+    <form action="./shut-down" method="post">
+      <input
+        type="hidden"
+        name="reason"
+        value="خداحافظ کاربر عزیز سیستم شما خاموش شد."
+      />
+      <button type="submit">خاموش کردن</button>
+    </form>
+    <form action="./restart" method="post">
+      <input
+        type="hidden"
+        name="reason"
+        value="خداحافظ کاربر عزیز سیستم شما راه اندازی مجدد شد."
+      />
+      <button type="submit">راه اندازی مجدد</button>
+    </form>
+    <form action="./sleep" method="post">
+      <input
+        type="hidden"
+        name="reason"
+        value="خداحافظ کاربر عزیز سیستم شما به خواب رفت."
+      />
+      <button type="submit">حالت خواب</button>
+    </form>
+    <form action="./file-explorer" method="post">
+      <input
+        type="hidden"
+        name="reason"
+        value="کاربر عزیز فایل اکسپلورر سیستم شما باز شد."
+      />
+      <button type="submit">باز کردن فایل اکسپلورر</button>
+    </form>
+  </body>
+</html>
